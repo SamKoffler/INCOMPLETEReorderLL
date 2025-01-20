@@ -18,7 +18,14 @@ class Solution:
             curr=curr.next
 
         l1 = ListNode()
+        
+        counter = 0
 
+        curr = head
 
-        def connectNext(curr, length):
+        while counter < length/2:
+            l1.next=curr
+            l1=l1.next
             curr=curr.next
+            counter+=1
+        return l1
