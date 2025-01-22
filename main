@@ -28,4 +28,15 @@ class Solution:
             l1=l1.next
             curr=curr.next
             counter+=1
+
+        counter = length/2
+
+        while counter < length:
+            l1.next=curr
+            l1=l1.next
+            curr=curr.next
+            counter+=1
+
+        l1.next = l2
+
         return l1
