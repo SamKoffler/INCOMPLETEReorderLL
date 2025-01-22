@@ -37,6 +37,16 @@ class Solution:
             curr=curr.next
             counter+=1
 
+        l1.next = None
+        
+        l2 = None
+        
+        while curr:
+            temp = curr.next
+            curr.next = l2
+            l2 = curr
+            curr = temp
+
         l1.next = l2
 
         return l1
